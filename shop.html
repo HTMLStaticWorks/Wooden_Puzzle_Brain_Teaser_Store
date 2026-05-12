@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Puzzles | Artisan Wooden Puzzles</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .filter-sidebar {
+            background: var(--surface-color);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            position: sticky;
+            top: 100px;
+        }
+        .filter-group {
+            margin-bottom: 30px;
+        }
+        .filter-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: block;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        .filter-list li {
+            margin-bottom: 10px;
+        }
+        .filter-list label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .filter-list input[type="checkbox"] {
+            accent-color: var(--accent-color);
+        }
+        .shop-header {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .sort-select {
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: var(--surface-color);
+            color: var(--text-primary);
+            cursor: pointer;
+            min-width: 180px;
+            outline: none;
+        }
+        .sort-select:focus {
+            border-color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-puzzle-piece"></i> Artisan<span>Puzzles</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link dropdown-toggle">Home</a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home - Artisan</a>
+                        <a href="home-2.html" class="dropdown-item">Home - Workshop</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+                
+                <li class="nav-item"><a href="laser-cut-gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="difficulty-guide.html" class="nav-link">Guide</a></li>
+                <li class="nav-item"><a href="wholesale.html" class="nav-link">Wholesale</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="navbar-right">
+                <button class="rtl-toggle" title="Toggle RTL Support">RTL</button><button class="theme-toggle">
+                    <i class="fas fa-sun sun"></i>
+                    <i class="fas fa-moon moon"></i>
+                </button>
+                <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">2</span></a>
+                <a href="signup.html" class="btn-auth btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Artisan Shop</h1>
+                <p>Browse our collection of handcrafted wooden puzzles and brain teasers.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <aside class="col-lg-3">
+                    <div class="filter-sidebar reveal">
+                        <div class="filter-group">
+                            <span class="filter-title">Categories</span>
+                            <ul class="filter-list">
+                                <li><label><input type="checkbox"> 3D Mechanical</label></li>
+                                <li><label><input type="checkbox"> Brain Teasers</label></li>
+                                <li><label><input type="checkbox"> Secret Boxes</label></li>
+                                <li><label><input type="checkbox"> Laser-Cut Models</label></li>
+                                <li><label><input type="checkbox"> Educational Set</label></li>
+                            </ul>
+                        </div>
+                        <div class="filter-group">
+                            <span class="filter-title">Difficulty Level</span>
+                            <ul class="filter-list">
+                                <li><label><input type="checkbox"> Beginner</label></li>
+                                <li><label><input type="checkbox"> Intermediate</label></li>
+                                <li><label><input type="checkbox"> Expert</label></li>
+                                <li><label><input type="checkbox"> Legendary</label></li>
+                            </ul>
+                        </div>
+                        <div class="filter-group">
+                            <span class="filter-title">Piece Count</span>
+                            <ul class="filter-list">
+                                <li><label><input type="checkbox"> 1-50 Pieces</label></li>
+                                <li><label><input type="checkbox"> 51-150 Pieces</label></li>
+                                <li><label><input type="checkbox"> 151-300 Pieces</label></li>
+                                <li><label><input type="checkbox"> 300+ Pieces</label></li>
+                            </ul>
+                        </div>
+                        <div class="filter-group">
+                            <span class="filter-title">Material</span>
+                            <ul class="filter-list">
+                                <li><label><input type="checkbox"> Walnut Wood</label></li>
+                                <li><label><input type="checkbox"> Maple Wood</label></li>
+                                <li><label><input type="checkbox"> Bamboo</label></li>
+                            </ul>
+                        </div>
+                        <button class="btn-primary w-100">Apply Filters</button>
+                    </div>
+                </aside>
+
+                <!-- Product Grid -->
+                <div class="col-lg-9">
+                    <div class="shop-header reveal">
+                        <div>
+                            <h1>All Puzzles</h1>
+                            <p>Showing 1–12 of 36 results</p>
+                        </div>
+                        <select class="sort-select">
+                            <option>Default Sorting</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                    </div>
+
+                    <div class="product-grid">
+                        <!-- Card 1 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Expert</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-1.jpg" alt="The Da Vinci Sphere"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Mechanical</span>
+                                <h3 class="title"><a href="product-details.html">The Da Vinci Sphere</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$59.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Intermediate</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-4.jpg" alt="The Kepler Cube"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Interlocking</span>
+                                <h3 class="title"><a href="product-details.html">The Kepler Cube</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$45.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Expert</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-5.jpg" alt="Galileo's Star"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Geometric</span>
+                                <h3 class="title"><a href="product-details.html">Galileo's Star</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$65.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Master</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-6.jpg" alt="Newton's Gravity Box"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Secret Opening</span>
+                                <h3 class="title"><a href="product-details.html">Newton's Gravity Box</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$120.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Intermediate</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-7.jpg" alt="Tesla's Coil Model"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Laser-Cut 3D</span>
+                                <h3 class="title"><a href="product-details.html">Tesla's Coil Model</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$89.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Expert</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-8.jpg" alt="The Fibonacci Frame"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Tiling Puzzle</span>
+                                <h3 class="title"><a href="product-details.html">The Fibonacci Frame</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$55.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Beginner</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-2.jpg" alt="Socrates' Logic Knot"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Brain Teaser</span>
+                                <h3 class="title"><a href="product-details.html">Socrates' Logic Knot</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$25.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Intermediate</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-3.jpg" alt="The Euler Spiral"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Mathematical</span>
+                                <h3 class="title"><a href="product-details.html">The Euler Spiral</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$42.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 9 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Legendary</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-9.jpg" alt="The Archimedes Screw"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Mechanical Model</span>
+                                <h3 class="title"><a href="product-details.html">The Archimedes Screw</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$145.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 10 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Intermediate</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-4.jpg" alt="The Pascal Triangle"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Geometric</span>
+                                <h3 class="title"><a href="product-details.html">The Pascal Triangle</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$48.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 11 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Expert</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-5.jpg" alt="The Turing Machine"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Logic Model</span>
+                                <h3 class="title"><a href="product-details.html">The Turing Machine</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$95.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 12 -->
+                        <div class="product-card reveal">
+                            <div class="product-image-wrapper">
+                                <span class="difficulty-tag">Expert</span>
+                                <a href="product-details.html"><img src="assets/images/puzzle-6.jpg" alt="The Hypatia Prism"></a>
+                            </div>
+                            <div class="product-details">
+                                <span class="category">Mathematical</span>
+                                <h3 class="title"><a href="product-details.html">The Hypatia Prism</a></h3>
+                                <div class="price-row">
+                                    <span class="price">$62.00</span>
+                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo mb-4" style="text-decoration: none;"><i class="fas fa-puzzle-piece"></i> Artisan<span>Puzzles</span></a>
+                    <p>Creating intelligent entertainment through handcrafted wooden masterpieces since 2015.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="3d-puzzles.html">3D Puzzles</a></li>
+                        <li><a href="shop.html">Brain Teasers</a></li>
+                        <li><a href="laser-cut-gallery.html">Laser-Cut Models</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="difficulty-guide.html">Difficulty Guide</a></li>
+                        <li><a href="blog.html">Maker Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="signup.html">Join Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Sharp</h4>
+                    <p>Get new puzzle releases and solving tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email address">
+                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Artisan Wooden Puzzle Store. All Rights Reserved. Designed with intelligence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>`n    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

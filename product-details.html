@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Da Vinci Sphere | Artisan Wooden Puzzles</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-gallery {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        .product-meta {
+            margin-bottom: 30px;
+        }
+        .qty-selector {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .qty-input {
+            width: 60px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 8px;
+            background: var(--surface-color);
+            color: var(--text-primary);
+        }
+        .specs-table {
+            width: 100%;
+            margin-top: 40px;
+            border-collapse: collapse;
+        }
+        .specs-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .specs-table td:first-child {
+            font-weight: 700;
+            color: var(--primary-color);
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-puzzle-piece"></i> Artisan<span>Puzzles</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link dropdown-toggle">Home</a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home - Artisan</a>
+                        <a href="home-2.html" class="dropdown-item">Home - Workshop</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+                
+                <li class="nav-item"><a href="laser-cut-gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="difficulty-guide.html" class="nav-link">Guide</a></li>
+                <li class="nav-item"><a href="wholesale.html" class="nav-link">Wholesale</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="navbar-right">
+                <button class="rtl-toggle" title="Toggle RTL Support">RTL</button><button class="theme-toggle">
+                    <i class="fas fa-sun sun"></i>
+                    <i class="fas fa-moon moon"></i>
+                </button>
+                <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">2</span></a>
+                <a href="signup.html" class="btn-auth btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 reveal">
+                    <div class="product-gallery">
+                        <img src="assets/images/puzzle-1.jpg" alt="The Da Vinci Sphere" class="img-fluid w-100">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-3"><img src="assets/images/puzzle-1.jpg" class="img-fluid rounded border"></div>
+                        <div class="col-3"><img src="assets/images/puzzle-2.jpg" class="img-fluid rounded border"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal" style="padding-left: 50px;">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+                            <li class="breadcrumb-item"><a href="#">Mechanical</a></li>
+                        </ol>
+                    </nav>
+                    <h1 class="mb-3">The Da Vinci Sphere</h1>
+                    <div class="product-meta">
+                        <span class="h3 text-warning">$59.00</span>
+                        <span class="ms-3 badge bg-dark">Difficulty: Expert</span>
+                    </div>
+                    <p class="mb-4">Unlock the secrets of the Renaissance with this intricate 12-piece interlocking wooden sphere. Crafted from sustainably sourced Walnut, this puzzle requires sequence, patience, and logic to solve and reassemble.</p>
+                    
+                    <div class="qty-selector">
+                        <span>Quantity:</span>
+                        <div class="d-flex align-items-center">
+                            <button class="qty-btn minus btn-outline p-2 px-3">-</button>
+                            <input type="number" value="1" class="qty-input mx-2" readonly>
+                            <button class="qty-btn plus btn-outline p-2 px-3">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary btn-lg w-100 mb-3 btn-add-cart">Add to Cart</button>
+                    <button class="btn-outline btn-lg w-100">Add to Wishlist</button>
+                    
+                    <table class="specs-table">
+                        <tr><td>Material</td><td>Solid Walnut & Maple</td></tr>
+                        <tr><td>Piece Count</td><td>12 Interlocking pieces</td></tr>
+                        <tr><td>Solution Time</td><td>2-4 Hours</td></tr>
+                        <tr><td>Dimensions</td><td>10cm x 10cm x 10cm</td></tr>
+                        <tr><td>Designer</td><td>Artisan Workshop Team</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo mb-4" style="text-decoration: none;"><i class="fas fa-puzzle-piece"></i> Artisan<span>Puzzles</span></a>
+                    <p>Creating intelligent entertainment through handcrafted wooden masterpieces since 2015.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="3d-puzzles.html">3D Puzzles</a></li>
+                        <li><a href="shop.html">Brain Teasers</a></li>
+                        <li><a href="laser-cut-gallery.html">Laser-Cut Models</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="difficulty-guide.html">Difficulty Guide</a></li>
+                        <li><a href="blog.html">Maker Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="signup.html">Join Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Sharp</h4>
+                    <p>Get new puzzle releases and solving tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email address">
+                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Artisan Wooden Puzzle Store. All Rights Reserved. Designed with intelligence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>`n    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser-Cut Gallery | Artisan Wooden Puzzles</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(91, 58, 41, 0.8);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-puzzle-piece"></i> Artisan<span>Puzzles</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link dropdown-toggle">Home</a>
+                    <div class="dropdown-menu">
+                        <a href="index.html" class="dropdown-item">Home - Artisan</a>
+                        <a href="home-2.html" class="dropdown-item">Home - Workshop</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                
+                <li class="nav-item"><a href="laser-cut-gallery.html" class="nav-link active">Gallery</a></li>
+                <li class="nav-item"><a href="difficulty-guide.html" class="nav-link">Guide</a></li>
+                <li class="nav-item"><a href="wholesale.html" class="nav-link">Wholesale</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="navbar-right">
+                <button class="rtl-toggle" title="Toggle RTL Support">RTL</button><button class="theme-toggle">
+                    <i class="fas fa-sun sun"></i>
+                    <i class="fas fa-moon moon"></i>
+                </button>
+                <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">2</span></a>
+                <a href="signup.html" class="btn-auth btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Maker Gallery</h1>
+                <p>A showcase of our most intricate laser-cut models and custom commissions.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 reveal">
+                    <div class="gallery-item">
+                        <img src="assets/images/laser-cut.jpg" class="img-fluid" alt="Detail 1">
+                        <div class="gallery-overlay"><h4>Intricate Foliage</h4><p>0.1mm precision cutting</p></div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="gallery-item">
+                        <img src="assets/images/puzzle-2.jpg" class="img-fluid" alt="Detail 2">
+                        <div class="gallery-overlay"><h4>Geometric Layers</h4><p>Stackable walnut pieces</p></div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="gallery-item">
+                        <img src="assets/images/workshop.jpg" class="img-fluid" alt="Detail 3">
+                        <div class="gallery-overlay"><h4>Raw Materials</h4><p>Premium dark walnut</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo mb-4" style="text-decoration: none;"><i class="fas fa-puzzle-piece"></i> Artisan<span>Puzzles</span></a>
+                    <p>Creating intelligent entertainment through handcrafted wooden masterpieces since 2015.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="3d-puzzles.html">3D Puzzles</a></li>
+                        <li><a href="shop.html">Brain Teasers</a></li>
+                        <li><a href="laser-cut-gallery.html">Laser-Cut Models</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="difficulty-guide.html">Difficulty Guide</a></li>
+                        <li><a href="blog.html">Maker Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="signup.html">Join Club</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Sharp</h4>
+                    <p>Get new puzzle releases and solving tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email address">
+                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Artisan Wooden Puzzle Store. All Rights Reserved. Designed with intelligence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>`n    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

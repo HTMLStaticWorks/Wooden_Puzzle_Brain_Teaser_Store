@@ -1,0 +1,61 @@
+/* 
+    Wooden Puzzle & Brain Teaser Store
+    Dark Mode Overrides
+*/
+
+[data-theme="dark"] {
+    --bg-color: #1C1917;
+    --surface-color: #292524;
+    --text-primary: #F5F5F4;
+    --text-secondary: #A8A29E;
+    --border-color: #44403C;
+    --primary-color: #D97706; /* Flip primary to amber for better contrast on dark */
+    --accent-color: #F59E0B;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .navbar {
+    background: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(rgba(28, 25, 23, 0.9), rgba(28, 25, 23, 0.9)), url('../images/hero-bg.jpg');
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .product-card {
+    background: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .product-details .title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] footer {
+    background: #0C0A09;
+}
+
+[data-theme="dark"] .btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+[data-theme="dark"] .theme-toggle .sun { display: block; }
+[data-theme="dark"] .theme-toggle .moon { display: none; }
+
+[data-theme="dark"] .difficulty-tag {
+    background: rgba(41, 37, 36, 0.9);
+    color: var(--accent-color);
+    border-color: var(--border-color);
+}

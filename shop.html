@@ -17,6 +17,7 @@
             border: 1px solid var(--border-color);
             position: sticky;
             top: 100px;
+            transition: all 0.3s ease;
         }
         .filter-group {
             margin-bottom: 30px;
@@ -62,6 +63,46 @@
         }
         .sort-select:focus {
             border-color: var(--accent-color);
+        }
+        .close-filters {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        @media (max-width: 1024px) {
+            .filter-sidebar {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 300px;
+                height: 100vh;
+                z-index: 2000;
+                overflow-y: auto;
+                border-radius: 0;
+                box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+            }
+            .filter-sidebar.active {
+                left: 0;
+            }
+            .close-filters {
+                display: block;
+            }
+            .mobile-filter-btn {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 25px;
+            }
+        }
+        @media (min-width: 1025px) {
+            .mobile-filter-btn {
+                display: none !important;
+            }
         }
     </style>
 </head>
@@ -116,6 +157,7 @@
                 <!-- Sidebar -->
                 <aside class="col-lg-3">
                     <div class="filter-sidebar reveal">
+                        <i class="fas fa-times close-filters"></i>
                         <div class="filter-group">
                             <span class="filter-title">Categories</span>
                             <ul class="filter-list">
@@ -158,6 +200,9 @@
 
                 <!-- Product Grid -->
                 <div class="col-lg-9">
+                    <button class="btn-outline w-100 mobile-filter-btn">
+                        <i class="fas fa-filter"></i> Open Filters
+                    </button>
                     <div class="shop-header reveal">
                         <div>
                             <h1>All Puzzles</h1>
@@ -183,7 +228,7 @@
                                 <h3 class="title"><a href="product-details.html">The Da Vinci Sphere</a></h3>
                                 <div class="price-row">
                                     <span class="price">$59.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +244,7 @@
                                 <h3 class="title"><a href="product-details.html">The Kepler Cube</a></h3>
                                 <div class="price-row">
                                     <span class="price">$45.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +260,7 @@
                                 <h3 class="title"><a href="product-details.html">Galileo's Star</a></h3>
                                 <div class="price-row">
                                     <span class="price">$65.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +276,7 @@
                                 <h3 class="title"><a href="product-details.html">Newton's Gravity Box</a></h3>
                                 <div class="price-row">
                                     <span class="price">$120.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +292,7 @@
                                 <h3 class="title"><a href="product-details.html">Tesla's Coil Model</a></h3>
                                 <div class="price-row">
                                     <span class="price">$89.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -263,7 +308,7 @@
                                 <h3 class="title"><a href="product-details.html">The Fibonacci Frame</a></h3>
                                 <div class="price-row">
                                     <span class="price">$55.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +324,7 @@
                                 <h3 class="title"><a href="product-details.html">Socrates' Logic Knot</a></h3>
                                 <div class="price-row">
                                     <span class="price">$25.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -295,7 +340,7 @@
                                 <h3 class="title"><a href="product-details.html">The Euler Spiral</a></h3>
                                 <div class="price-row">
                                     <span class="price">$42.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -311,7 +356,7 @@
                                 <h3 class="title"><a href="product-details.html">The Archimedes Screw</a></h3>
                                 <div class="price-row">
                                     <span class="price">$145.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -327,7 +372,7 @@
                                 <h3 class="title"><a href="product-details.html">The Pascal Triangle</a></h3>
                                 <div class="price-row">
                                     <span class="price">$48.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -343,7 +388,7 @@
                                 <h3 class="title"><a href="product-details.html">The Turing Machine</a></h3>
                                 <div class="price-row">
                                     <span class="price">$95.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -359,7 +404,7 @@
                                 <h3 class="title"><a href="product-details.html">The Hypatia Prism</a></h3>
                                 <div class="price-row">
                                     <span class="price">$62.00</span>
-                                    <button class="btn-add-cart" title="Add to Cart"><i class="fas fa-plus"></i></button>
+                                    <div class="cart-action-wrapper"><button class="btn-add-to-cart">Add to Cart</button><div class="quantity-controls"><button class="qty-btn minus"><i class="fas fa-minus"></i></button><span class="qty-count">1</span><button class="qty-btn plus"><i class="fas fa-plus"></i></button><i class="fas fa-trash-can btn-remove-cart" title="Remove from Cart"></i></div></div>
                                 </div>
                             </div>
                         </div>
@@ -418,6 +463,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>`n    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/animations.js"></script>
+    <script src="assets/js/cart-actions.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

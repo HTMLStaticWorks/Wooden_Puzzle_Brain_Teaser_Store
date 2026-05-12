@@ -11,8 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     htmlElement.setAttribute('data-theme', savedTheme);
     
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
+    // Theme Toggle delegation
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.theme-toggle')) {
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             
@@ -22,19 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (window.gsap) {
                 gsap.fromTo('body', { opacity: 0.8 }, { opacity: 1, duration: 0.5 });
             }
-        });
-    }
+        }
+    });
 
-    // RTL Support
-    const rtlToggle = document.querySelector('.rtl-toggle');
+    // RTL Support delegation
     const savedRtl = localStorage.getItem('rtl') === 'true';
-    
-    if (savedRtl) {
-        htmlElement.setAttribute('dir', 'rtl');
-    }
+    if (savedRtl) htmlElement.setAttribute('dir', 'rtl');
 
-    if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.rtl-toggle')) {
             const isRtl = htmlElement.getAttribute('dir') === 'rtl';
             const newRtl = !isRtl;
             
@@ -49,6 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (window.gsap) {
                 gsap.from('body', { x: newRtl ? 30 : -30, opacity: 0, duration: 0.4 });
             }
-        });
-    }
+        }
+    });
 });

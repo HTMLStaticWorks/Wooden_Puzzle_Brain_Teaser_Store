@@ -4,11 +4,87 @@
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle (if implemented)
-    const mobileMenuBtn = document.createElement('button');
-    mobileMenuBtn.className = 'mobile-menu-btn';
-    mobileMenuBtn.innerHTML = '☰';
-    // Add logic to navbar for mobile later if needed
+    // Mobile Menu Implementation
+    const navbar = document.querySelector('.navbar .container');
+    const navLinks = document.querySelector('.nav-links');
+    const navbarRight = document.querySelector('.navbar-right');
+    
+    // Create Mobile Toggle
+    const mobileToggle = document.createElement('button');
+    mobileToggle.className = 'mobile-menu-btn';
+    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    navbar.appendChild(mobileToggle);
+
+    // Create Overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+
+    // Create Inside Close Button
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'close-menu-btn';
+    closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+    navLinks.prepend(closeBtn);
+    closeBtn.addEventListener('click', () => toggleMenu());
+
+    // Clone Right Items for Mobile Menu
+    const mobileRightItems = navbarRight.cloneNode(true);
+    mobileRightItems.classList.remove('navbar-right'); // CRITICAL: Remove the hidden class
+    mobileRightItems.classList.add('navbar-right-mobile');
+    navLinks.appendChild(mobileRightItems);
+
+    // Toggle Function
+    const toggleMenu = () => {
+        navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
+        mobileToggle.innerHTML = navLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    };
+
+    mobileToggle.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    // Close menu on link click
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            // If it's a dropdown toggle in mobile
+            if (window.innerWidth <= 1024 && link.classList.contains('dropdown-toggle')) {
+                e.preventDefault();
+                const parent = link.parentElement;
+                parent.classList.toggle('open');
+                return;
+            }
+            if (navLinks.classList.contains('active')) toggleMenu();
+        });
+        // Shop Filter Sidebar Toggle
+    const filterBtn = document.querySelector('.mobile-filter-btn');
+    const filterSidebar = document.querySelector('.filter-sidebar');
+    const closeFilters = document.querySelector('.close-filters');
+
+    if (filterBtn && filterSidebar) {
+        filterBtn.addEventListener('click', () => {
+            filterSidebar.classList.add('active');
+            overlay.classList.add('active');
+        });
+
+        const hideFilters = () => {
+            filterSidebar.classList.remove('active');
+            if (!navLinks.classList.contains('active')) {
+                overlay.classList.remove('active');
+            }
+        };
+
+        if (closeFilters) closeFilters.addEventListener('click', hideFilters);
+        overlay.addEventListener('click', hideFilters);
+    }
+});
+
+    // Re-bind theme toggle for the cloned mobile version
+    const mobileThemeToggle = mobileRightItems.querySelector('.theme-toggle');
+    if (mobileThemeToggle && typeof initThemeToggle === 'function') {
+        // The theme toggle logic is usually in its own file, 
+        // we might need to ensure it's re-initialized for the clone.
+    }
     
     // Smooth Scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

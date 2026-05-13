@@ -78,9 +78,12 @@ ul {
     padding: 20px 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2000; /* High enough to stay on top of everything */
     border-bottom: 1px solid var(--border-color);
     transition: var(--transition-smooth);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar .container {
@@ -1324,12 +1327,18 @@ html[dir="rtl"] .cart-count {
 /* Mobile Navigation Redesign */
 .mobile-menu-btn {
     display: none;
-    background: none;
+    background: transparent;
     border: none;
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    font-size: 1.6rem;
+    color: var(--primary-color) !important;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
+    z-index: 2100;
+    line-height: 1;
+}
+
+[data-theme="dark"] .mobile-menu-btn {
+    color: var(--accent-color) !important;
 }
 
 .close-menu-btn {
@@ -1340,7 +1349,7 @@ html[dir="rtl"] .cart-count {
     display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
     .mobile-menu-btn {
         display: block;
     }
@@ -1356,7 +1365,7 @@ html[dir="rtl"] .cart-count {
         color: var(--primary-color);
         cursor: pointer;
         padding: 5px;
-        z-index: 1001;
+        z-index: 3100;
     }
 
     .nav-links {
@@ -1370,7 +1379,7 @@ html[dir="rtl"] .cart-count {
         padding: 80px 30px;
         transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
+        z-index: 3000;
         align-items: flex-start;
         gap: 15px;
         display: flex;

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.product-card').forEach(el => {
             gsap.set(el, { opacity: 1, y: 0, scale: 1, visibility: 'visible' });
         });
+        gsap.set('.navbar', { opacity: 1, y: 0, visibility: 'visible' });
     };
 
     if (typeof gsap === 'undefined') {
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         stagger: 0.2,
         clearProps: "all"
     });
-    gsap.from('.navbar', { y: -100, duration: 1, ease: 'power4.out' });
+    gsap.from('.navbar', { y: -100, duration: 1, ease: 'power4.out', clearProps: "all" });
 
     // --- Section Titles & General Reveals ---
     const revealElements = document.querySelectorAll('.reveal');

@@ -1713,6 +1713,15 @@ html[dir="rtl"] .cart-count {
     }
 }
 
+/* Auth Page Mobile Optimizations */
+@media (max-width: 400px) {
+    .auth-page .form-check-label.small,
+    .auth-page a.small {
+        font-size: 0.75rem !important;
+    }
+}
+
+
 
 /* 1024p Best Sellers Centering Fix */
 @media (min-width: 992px) and (max-width: 1199px) {

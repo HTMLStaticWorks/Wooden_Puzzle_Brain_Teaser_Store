@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar .container');
     const navLinks = document.querySelector('.nav-links');
     const navbarRight = document.querySelector('.navbar-right');
-    
+
     // Create Mobile Toggle
     const mobileToggle = document.createElement('button');
     mobileToggle.className = 'mobile-menu-btn';
@@ -57,27 +57,27 @@ document.addEventListener('DOMContentLoaded', () => {
             if (navLinks.classList.contains('active')) toggleMenu();
         });
         // Shop Filter Sidebar Toggle
-    const filterBtn = document.querySelector('.mobile-filter-btn');
-    const filterSidebar = document.querySelector('.filter-sidebar');
-    const closeFilters = document.querySelector('.close-filters');
+        const filterBtn = document.querySelector('.mobile-filter-btn');
+        const filterSidebar = document.querySelector('.filter-sidebar');
+        const closeFilters = document.querySelector('.close-filters');
 
-    if (filterBtn && filterSidebar) {
-        filterBtn.addEventListener('click', () => {
-            filterSidebar.classList.add('active');
-            overlay.classList.add('active');
-        });
+        if (filterBtn && filterSidebar) {
+            filterBtn.addEventListener('click', () => {
+                filterSidebar.classList.add('active');
+                overlay.classList.add('active');
+            });
 
-        const hideFilters = () => {
-            filterSidebar.classList.remove('active');
-            if (!navLinks.classList.contains('active')) {
-                overlay.classList.remove('active');
-            }
-        };
+            const hideFilters = () => {
+                filterSidebar.classList.remove('active');
+                if (!navLinks.classList.contains('active')) {
+                    overlay.classList.remove('active');
+                }
+            };
 
-        if (closeFilters) closeFilters.addEventListener('click', hideFilters);
-        overlay.addEventListener('click', hideFilters);
-    }
-});
+            if (closeFilters) closeFilters.addEventListener('click', hideFilters);
+            overlay.addEventListener('click', hideFilters);
+        }
+    });
 
     // Re-bind theme toggle for the cloned mobile version
     const mobileThemeToggle = mobileRightItems.querySelector('.theme-toggle');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // The theme toggle logic is usually in its own file, 
         // we might need to ensure it's re-initialized for the clone.
     }
-    
+
     // Smooth Scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toast.className = 'toast-notification';
         toast.innerText = message;
         document.body.appendChild(toast);
-        
+
         setTimeout(() => toast.classList.add('show'), 100);
         setTimeout(() => {
             toast.classList.remove('show');

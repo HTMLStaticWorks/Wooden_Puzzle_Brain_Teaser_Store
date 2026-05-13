@@ -52,10 +52,10 @@
             </ul>
 
             <div class="navbar-right">
-                <button class="rtl-toggle" title="Toggle RTL Support">RTL</button><button class="theme-toggle">
+                <button class="theme-toggle">
                     <i class="fas fa-sun sun"></i>
                     <i class="fas fa-moon moon"></i>
-                </button>
+                </button><button class="rtl-toggle" title="Toggle RTL Support">RTL</button>
                 <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-cart"></i><span
                         class="cart-count">2</span></a>
                 <a href="signup.html" class="btn-auth btn-signup">Sign Up</a>
@@ -89,11 +89,11 @@
 
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="product-card reveal">
+                    <div class="product-card">
                         <div class="product-image-wrapper">
-                            <img src="assets/images/puzzle-1.jpg" alt="3D Mechanical Puzzle">
+                            <img src="assets/images/specialty-1.png" alt="3D Mechanical Puzzle">
                         </div>
-                        <div class="product-details">
+                        <div class="product-details text-center">
                             <span class="category">Mechanical</span>
                             <h3 class="title">3D Interlocking Puzzles</h3>
                             <a href="3d-puzzles.html" class="btn-outline">View Category</a>
@@ -101,11 +101,11 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="product-card reveal">
+                    <div class="product-card">
                         <div class="product-image-wrapper">
-                            <img src="assets/images/puzzle-2.jpg" alt="Laser Cut Puzzles">
+                            <img src="assets/images/specialty-2.png" alt="Laser Cut Puzzles">
                         </div>
-                        <div class="product-details">
+                        <div class="product-details text-center">
                             <span class="category">Artisan</span>
                             <h3 class="title">Laser-Cut Creations</h3>
                             <a href="laser-cut-gallery.html" class="btn-outline">Explore Gallery</a>
@@ -113,11 +113,11 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="product-card reveal">
+                    <div class="product-card">
                         <div class="product-image-wrapper">
-                            <img src="assets/images/puzzle-3.jpg" alt="Classic Brain Teasers">
+                            <img src="assets/images/specialty-3.png" alt="Classic Brain Teasers">
                         </div>
-                        <div class="product-details">
+                        <div class="product-details text-center">
                             <span class="category">Traditional</span>
                             <h3 class="title">Classic Brain Teasers</h3>
                             <a href="shop.html" class="btn-outline">Shop Now</a>
@@ -137,8 +137,10 @@
                         style="max-width: 90%;">
                 </div>
                 <div class="col-md-7 reveal" style="padding-left: 50px;">
-                    <span class="hero-tag">The Maker Atmosphere</span>
-                    <h2>Handcrafted Precision</h2>
+                    <div class="d-none d-md-block">
+                        <span class="hero-tag">The Maker Atmosphere</span>
+                        <h2>Handcrafted Precision</h2>
+                    </div>
                     <p>Every piece in our collection is born from a passion for woodworking. We use sustainably sourced
                         walnut and maple, precision-cut with high-end laser technology and hand-finished for that
                         tactile, premium feel.</p>
@@ -161,7 +163,7 @@
                 <p>Join thousands of puzzle enthusiasts worldwide.</p>
             </div>
 
-            <div class="product-grid reveal">
+            <div class="product-grid">
                 <!-- Product 1 -->
                 <div class="product-card">
                     <div class="product-image-wrapper">
@@ -244,29 +246,33 @@
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-lg-6 reveal">
+                <div class="col-lg-6">
                     <div class="product-card p-0 overflow-hidden d-flex flex-md-row flex-column" style="height: 100%;">
                         <div style="flex: 1; min-height: 250px;">
-                            <img src="assets/images/puzzle-4.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Collector's Set">
+                            <img src="assets/images/puzzle-4.jpg" class="w-100 h-100" style="object-fit: cover;"
+                                alt="Collector's Set">
                         </div>
                         <div class="p-5 d-flex flex-column justify-content-center" style="flex: 1;">
                             <span class="text-warning small fw-bold mb-2">LIMITED EDITION</span>
                             <h4>The Collector's Set</h4>
-                            <p class="small text-secondary mb-4">Includes 3 expert-level mechanical puzzles and a solid walnut display stand.</p>
+                            <p class="small text-secondary mb-4">Includes 3 expert-level mechanical puzzles and a solid
+                                walnut display stand.</p>
                             <span class="h4 text-primary mb-4">$149.00</span>
                             <a href="product-details.html" class="btn-primary">Explore Set</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 reveal">
+                <div class="col-lg-6">
                     <div class="product-card p-0 overflow-hidden d-flex flex-md-row flex-column" style="height: 100%;">
                         <div style="flex: 1; min-height: 250px;">
-                            <img src="assets/images/puzzle-5.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Beginner's Journey">
+                            <img src="assets/images/puzzle-5.jpg" class="w-100 h-100" style="object-fit: cover;"
+                                alt="Beginner's Journey">
                         </div>
                         <div class="p-5 d-flex flex-column justify-content-center" style="flex: 1;">
                             <span class="text-warning small fw-bold mb-2">STARTER PACK</span>
                             <h4>The Beginner's Journey</h4>
-                            <p class="small text-secondary mb-4">A curated selection of 4 introductory brain teasers with a detailed solving guide.</p>
+                            <p class="small text-secondary mb-4">A curated selection of 4 introductory brain teasers
+                                with a detailed solving guide.</p>
                             <span class="h4 text-primary mb-4">$89.00</span>
                             <a href="product-details.html" class="btn-primary">Explore Set</a>
                         </div>
@@ -284,16 +290,19 @@
                 <h2 class="display-4 fw-bold mb-4">The Artisan Club</h2>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <p class="lead mb-5">Be the first to know about limited workshop releases, receive early-access invites to our laser-cut gallery events, and get 15% off your first order.</p>
+                        <p class="lead mb-5">Be the first to know about limited workshop releases, receive early-access
+                            invites to our laser-cut gallery events, and get 15% off your first order.</p>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <form class="d-flex gap-2">
-                            <input type="email" class="form-control" placeholder="Enter your email" style="padding: 15px 20px;">
+                        <form class="d-flex" style="gap: 15px;">
+                            <input type="email" class="form-control" placeholder="Enter your email"
+                                style="padding: 15px 20px;">
                             <button type="submit" class="btn-primary" style="padding: 15px 30px;">Join Now</button>
                         </form>
-                        <p class="small text-center mt-3" style="opacity: 0.6;">By joining, you agree to our privacy policy. No spam, ever.</p>
+                        <p class="small text-center mt-3" style="opacity: 0.6;">By joining, you agree to our privacy
+                            policy. No spam, ever.</p>
                     </div>
                 </div>
             </div>
@@ -301,11 +310,12 @@
     </section>
 
     <!-- Footer -->
-        <footer>
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo mb-4" style="text-decoration: none;"><i class="fas fa-puzzle-piece"></i> Artisan<span>Puzzles</span></a>
+                    <a href="index.html" class="logo mb-4" style="text-decoration: none;"><i
+                            class="fas fa-puzzle-piece"></i> Artisan<span>Puzzles</span></a>
                     <p>Creating intelligent entertainment through handcrafted wooden masterpieces since 2015.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -347,8 +357,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>`n
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/animations.js"></script>
@@ -357,5 +366,3 @@
 </body>
 
 </html>
-
-

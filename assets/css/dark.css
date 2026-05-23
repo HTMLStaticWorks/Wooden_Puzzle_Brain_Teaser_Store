@@ -4,13 +4,13 @@
 */
 
 [data-theme="dark"] {
-    --bg-color: #1C1917;
-    --surface-color: #292524;
-    --text-primary: #F5F5F4;
-    --text-secondary: #A8A29E;
-    --border-color: #44403C;
-    --primary-color: #D97706; /* Flip primary to amber for better contrast on dark */
-    --accent-color: #F59E0B;
+    --bg-color: #000000; /* Pure black background */
+    --surface-color: #161616; /* Premium dark grey for alternate sections/surfaces */
+    --text-primary: #FFFFFF;
+    --text-secondary: #A1A1AA;
+    --border-color: #262626; /* Refined dark borders */
+    --primary-color: #5B3A29; /* Consistent brand primary color (dark brown) */
+    --accent-color: #D97706; /* Consistent brand accent color (warm gold) */
 }
 
 [data-theme="dark"] body {
@@ -24,12 +24,12 @@
 }
 
 [data-theme="dark"] .hero {
-    background: linear-gradient(rgba(28, 25, 23, 0.9), rgba(28, 25, 23, 0.9)), url('../images/hero-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../images/hero-bg.jpg');
     border-color: var(--border-color);
 }
 
 [data-theme="dark"] .hero-workshop {
-    background: linear-gradient(rgba(28, 25, 23, 0.85), rgba(28, 25, 23, 0.85)), url('../images/workshop.jpg');
+    background: linear-gradient(rgba(22, 22, 22, 0.85), rgba(22, 22, 22, 0.85)), url('../images/workshop.jpg');
 }
 
 [data-theme="dark"] .product-card {
@@ -42,24 +42,119 @@
 }
 
 [data-theme="dark"] footer {
-    background: #0C0A09;
+    background: var(--surface-color); /* Premium dark grey footer */
+    border-color: var(--border-color);
 }
 
-[data-theme="dark"] .btn-outline {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+/* Brand Identity Heading Visibility & Contrast Adjustments */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .footer-brand h3,
+[data-theme="dark"] .footer-links h4,
+[data-theme="dark"] .footer-newsletter h4 {
+    color: var(--text-primary);
 }
 
-[data-theme="dark"] .btn-outline:hover {
-    background: var(--primary-color);
+/* Brand Logo visibility in dark mode */
+[data-theme="dark"] .logo {
+    color: var(--text-primary) !important;
+}
+
+/* Interface elements & Control Buttons */
+[data-theme="dark"] .nav-icon,
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .rtl-toggle,
+[data-theme="dark"] .btn-login {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .nav-icon:hover,
+[data-theme="dark"] .theme-toggle:hover,
+[data-theme="dark"] .rtl-toggle:hover,
+[data-theme="dark"] .btn-login:hover {
+    color: var(--accent-color);
+    background: rgba(217, 119, 6, 0.1);
+}
+
+[data-theme="dark"] .mobile-menu-btn {
+    color: var(--text-primary) !important;
+}
+
+/* FAQ & Spec Values */
+[data-theme="dark"] .faq-question {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .faq-question:hover {
+    color: var(--accent-color);
+}
+
+[data-theme="dark"] .spec-value {
+    color: var(--text-primary);
+}
+
+/* Social links in footer */
+[data-theme="dark"] .social-links a {
+    color: var(--text-primary);
+    background: var(--bg-color);
+}
+
+[data-theme="dark"] .social-links a:hover {
+    background: var(--accent-color);
     color: #fff;
 }
 
-[data-theme="dark"] .theme-toggle .sun { display: block; }
-[data-theme="dark"] .theme-toggle .moon { display: none; }
+/* Primary buttons (keep dark brown background, add brand accent border for high contrast) */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-signup,
+[data-theme="dark"] .btn-add-to-cart {
+    background: var(--primary-color);
+    color: #FFFFFF !important;
+    border: 1px solid var(--accent-color) !important;
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.15); /* Warm organic glow */
+}
 
-[data-theme="dark"] .difficulty-tag {
-    background: rgba(41, 37, 36, 0.9);
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-signup:hover,
+[data-theme="dark"] .btn-add-to-cart:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 6px 20px rgba(217, 119, 6, 0.3);
+}
+
+/* Outline buttons in dark mode use the brand's vibrant accent color */
+[data-theme="dark"] .btn-outline {
+    border-color: var(--accent-color);
     color: var(--accent-color);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+/* Difficulty tag */
+[data-theme="dark"] .difficulty-tag {
+    background: rgba(22, 22, 22, 0.9);
+    color: var(--accent-color);
+    border-color: var(--border-color);
+}
+
+/* Authentication Page Link styles */
+[data-theme="dark"] .auth-link {
+    color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .auth-link:hover {
+    color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .auth-page .glass-panel {
+    background: rgba(22, 22, 22, 0.95) !important;
     border-color: var(--border-color);
 }

@@ -1787,6 +1787,44 @@ html[dir="rtl"] .cart-count {
         max-width: 300px;
         margin: 0 !important; /* Remove any side margins that might cause offset */
     }
+
+    .bespoke-container {
+        padding: 50px 20px !important;
+        border-radius: 20px !important;
+    }
+    
+    .bespoke-container h2,
+    [data-theme="dark"] .bespoke-container h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .bespoke-container .lead {
+        font-size: 1rem !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .bespoke-container .d-flex {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+    
+    .bespoke-container .d-flex a.btn-primary,
+    .bespoke-container .d-flex a.btn-outline {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+
+    .bespoke-container form input.form-control,
+    .bespoke-container form button.btn-primary {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+    }
 }
 
 /* Auth Page Mobile Optimizations */
